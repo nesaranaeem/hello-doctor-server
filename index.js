@@ -84,7 +84,7 @@ const run = async () => {
 
     app.get("/v2/appointmentOptions", async (req, res) => {
       const date = req.query.date;
-      const options = await appointmentOptionCollection
+      const options = await appointmentOptionsCollection
         .aggregate([
           {
             $lookup: {
